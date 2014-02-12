@@ -1,5 +1,10 @@
 Instant Authentication
 ----------------------
+Instauth has a "simple goal": Make the world a safer place by enabling instant single sign-on (SSO) and two-factor authentication (2FA).
+
+Enterprises that launch new solutions to their employees and customers have a dilemma: issue new users/passwords or take some months to integrate SSO. Neither is very appealing. Instauth will solve this by enabling instant single sign-on.
+
+Additionally those companies that moved to SSO found that one weak password can jeopardize their whole infrastructure. This is why 2FA is so important. Instauth will also enable to instantly use 2FA.
 
 This repository hosts the implementation of the [Instant SSO and 2-Factor Authentication Juju Lab](https://juju.ubuntu.com/community/lab/instant-sso-and-2fa/).
 
