@@ -6,6 +6,8 @@ Enterprises that launch new solutions to their employees and customers have a di
 
 Additionally those companies that moved to SSO found that one weak password can jeopardize their whole infrastructure. This is why 2FA is so important. Instauth will also enable to instantly use 2FA.
 
+We are happy for any new contributors to join. You can either contact Maarten dot Ectors at Canonical dot com or Glyn via gnormington at gopivotal dot com.
+
 This repository hosts the implementation of the [Instant SSO and 2-Factor Authentication Juju Lab](https://juju.ubuntu.com/community/lab/instant-sso-and-2fa/).
 
 Useful links:
