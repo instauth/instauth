@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>org.instauth</groupId>
+		<artifactId>org.instauth.parent</artifactId>
+		<version>0.1.0.BUILD-SNAPSHOT</version>
+		<relativePath>../releng/pom.xml</relativePath>
+	</parent>
+
+	<artifactId>org.instauth.broker</artifactId>
+	<name>org.instauth.broker</name>
+	<description>org.instauth.broker</description>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.felix</groupId>
+				<artifactId>maven-bundle-plugin</artifactId>
+				<executions>
+					<execution>
+						<id>bundle-manifest</id>
+						<phase>process-classes</phase>
+						<goals>
+							<goal>manifest</goal>
+						</goals>
+					</execution>
+				</executions>
+				<configuration>
+					<instructions>
+						<Bundle-SymbolicName>${project.artifactId}</Bundle-SymbolicName>
+						<Bundle-Vendor>EclipseSource</Bundle-Vendor>
+						<Web-ContextPath>/broker</Web-ContextPath>
+						<Import-Bundle>
+							org.springframework.beans,
+							org.springframework.context,
+							org.springframework.web,
+							org.springframework.web.servlet
+						</Import-Bundle>
+						<Import-Package>
+							org.eclipse.virgo.web.dm,
+							javax.servlet;version="[2.5,4.0)",
+							javax.servlet.http;version="[2.5,4.0)",
+							*
+						</Import-Package>
+						<Bundle-Classpath>
+							.
+						</Bundle-Classpath>
+					</instructions>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>javax.servlet-api</artifactId>
+		</dependency>
+	</dependencies>
+</project>
