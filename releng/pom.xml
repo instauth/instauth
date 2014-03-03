@@ -45,6 +45,7 @@
 		<module>../apache.httpcore</module>
 		<module>../apache.httpclient</module>
 
+		<module>../aether.boot</module>
 		<module>../broker</module>
 	</modules>
 
