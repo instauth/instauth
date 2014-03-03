@@ -40,6 +40,11 @@
 	</properties>
 
 	<modules>
+		<module>../plexus.utils.wrapper</module>
+		<module>../maven.repository.metadata</module>
+		<module>../apache.httpcore</module>
+		<module>../apache.httpclient</module>
+
 		<module>../broker</module>
 	</modules>
 
