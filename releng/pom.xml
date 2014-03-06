@@ -28,7 +28,7 @@
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		
+
 		<maven.bundle.plugin.version>2.3.7</maven.bundle.plugin.version>
 		<maven.jar.plugin.version>2.3.2</maven.jar.plugin.version>
 		<maven.resources.plugin.version>2.5</maven.resources.plugin.version>
@@ -37,6 +37,10 @@
 
 		<slf4j.version>1.7.5</slf4j.version>
 		<javax.servlet.version>3.0.1</javax.servlet.version>
+
+		<aether.version>0.9.0.M4</aether.version>
+		<maven.version>3.1.0</maven.version>
+		<springframework.version>3.1.0.RELEASE</springframework.version>
 	</properties>
 
 	<modules>
@@ -45,7 +49,9 @@
 		<module>../apache.httpcore</module>
 		<module>../apache.httpclient</module>
 
+		<module>../maven.aether.boot</module>
 		<module>../aether.boot</module>
+
 		<module>../broker</module>
 	</modules>
 
@@ -119,11 +125,50 @@
 				<groupId>javax.servlet</groupId>
 				<artifactId>javax.servlet-api</artifactId>
 				<version>${javax.servlet.version}</version>
+				<scope>provided</scope>
 			</dependency>
 			<dependency>
 				<groupId>org.slf4j</groupId>
 				<artifactId>slf4j-api</artifactId>
 				<version>${slf4j.version}</version>
+				<scope>provided</scope>
+			</dependency>
+
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>org.springframework.context</artifactId>
+				<version>${springframework.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.eclipse.aether</groupId>
+				<artifactId>aether-api</artifactId>
+				<version>${aether.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.eclipse.aether</groupId>
+				<artifactId>aether-spi</artifactId>
+				<version>${aether.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.eclipse.aether</groupId>
+				<artifactId>aether-util</artifactId>
+				<version>${aether.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.eclipse.aether</groupId>
+				<artifactId>aether-impl</artifactId>
+				<version>${aether.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.eclipse.aether</groupId>
+				<artifactId>aether-transport-http</artifactId>
+				<version>${aether.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.eclipse.aether</groupId>
+				<artifactId>aether-connector-basic</artifactId>
+				<version>${aether.version}</version>
 			</dependency>
 		</dependencies>
 	</dependencyManagement>
