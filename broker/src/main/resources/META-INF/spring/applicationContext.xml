@@ -12,5 +12,16 @@
 	<bean id="hostInformation" class="org.instauth.broker.HostInformation">
         <blueprint-compendium:managed-properties persistent-id="hostInformation" autowire-on-update="true" />
         <property name="charmName" value="unknown" />
+        <property name="adapterManager" ref="adapterManager" />
+	</bean>
+
+	<osgi:reference id="repositorySystem" interface="org.eclipse.aether.RepositorySystem" />
+
+	<bean id="jarSource" class="org.instauth.broker.internal.AetherJarSource">
+		<property name="repositorySystem" ref="repositorySystem" />
+	</bean>
+
+	<bean id="adapterManager" class="org.instauth.broker.internal.AetherAdapterManager" init-method="init">
+		<property name="jarSource" ref="jarSource" />
 	</bean>
 </beans>
