@@ -34,10 +34,13 @@
 						<Require-Bundle>
 							org.eclipse.aether.api,
 							org.eclipse.aether.spi,
-							org.eclipse.aether.util
+							org.eclipse.aether.util,
+							org.eclipse.aether.impl,
+							org.eclipse.aether.transport.http,
+							org.eclipse.aether.connector.basic
 						</Require-Bundle>
 						<Import-Package>
-							!org.osgi.service.blueprint,
+							!org.codehaus.plexus.component.annotations,
 							*
 						</Import-Package>
 					</instructions>
@@ -58,6 +61,11 @@
 		<dependency>
 			<groupId>org.eclipse.aether</groupId>
 			<artifactId>aether-impl</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.maven</groupId>
+			<artifactId>maven-aether-provider</artifactId>
+			<version>${maven.version}</version>
 		</dependency>
 	</dependencies>
 </project>
