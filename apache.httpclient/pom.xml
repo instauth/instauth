@@ -6,7 +6,7 @@
         <bundle.symbolicName>org.apache.httpcomponents.httpclient</bundle.symbolicName>
         <wrapped.groupId>org.apache.httpcomponents</wrapped.groupId>
         <wrapped.artifactId>httpclient</wrapped.artifactId>
-        <wrapped.version>4.2.6</wrapped.version>
+        <wrapped.version>4.3.6</wrapped.version>
     </properties>
   
     <modelVersion>4.0.0</modelVersion>
