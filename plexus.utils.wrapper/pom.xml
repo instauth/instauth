@@ -6,7 +6,7 @@
         <bundle.symbolicName>org.codehaus.plexus.utils</bundle.symbolicName>
         <wrapped.groupId>org.codehaus.plexus</wrapped.groupId>
         <wrapped.artifactId>plexus-utils</wrapped.artifactId>
-        <wrapped.version>2.1</wrapped.version>
+        <wrapped.version>3.0.16</wrapped.version>
     </properties>
 
     <modelVersion>4.0.0</modelVersion>
