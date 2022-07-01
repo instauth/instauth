@@ -115,7 +115,7 @@
 		<dependency>
 			<groupId>org.codehaus.plexus</groupId>
 			<artifactId>plexus-utils</artifactId>
-			<version>3.0.10</version>
+			<version>3.0.16</version>
 		</dependency>
 		<dependency>
 			<groupId>org.apache.maven</groupId>
@@ -145,7 +145,7 @@
 		<dependency>
 			<groupId> org.codehaus.plexus</groupId>
 			<artifactId>plexus-utils</artifactId>
-			<version>3.0.10</version>
+			<version>3.0.16</version>
 		</dependency>
 		<dependency>
 			<groupId> org.codehaus.plexus</groupId>
